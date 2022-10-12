@@ -31,7 +31,7 @@ violatingAzureResources =
       plan.filter_attribute_not_contains_list(allAzureResourcesWithStandardTags,
                     "tags", mandatory_tags, true)
 
-printf("No. Resource Violating :: %d",violatingAzureResources)
+print("No. Resource Violating :: "violatingAzureResources)
 
 # Main rule
 main = rule {
