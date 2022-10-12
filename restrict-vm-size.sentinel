@@ -50,7 +50,7 @@ validate_attribute_in_list = func(type, attribute, allowed_values) {
 
   # Loop through the resource instances
   for resource_instances as address, r {
-
+    print("drs ",address)
     # Skip resource instances that are being destroyed
     # to avoid unnecessary policy violations.
     # Used to be: if length(r.diff) == 0
