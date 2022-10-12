@@ -12,14 +12,12 @@ import "strings"
 find_resources_from_plan = func(type) {
 
 
-  print("Try to finding ", type)
   resources = {}
 
   # Iterate over all modules in the tfplan import
   for tfplan.module_paths as path {
     # Iterate over the named resources of desired type in the module
     for tfplan.module(path).resources[type] else {} as name, instances {
-      print("name :: ",name," path ::",path)
       # Iterate over resource instances
       for instances as index, r {
 
@@ -38,7 +36,6 @@ find_resources_from_plan = func(type) {
       }
     }
   }
-  print("Found this resources :: ",resources)
   return resources
 }
 
@@ -48,13 +45,11 @@ validate_attribute_in_list = func(type, attribute, allowed_values) {
 
   validated = true
   
-  print("type: ",type,"calling find_resource_from_plan ")
   # Get all resource instances of the specified type
   resource_instances = find_resources_from_plan(type)
 
   # Loop through the resource instances
   for resource_instances as address, r {
-    print("drs ",address)
     # Skip resource instances that are being destroyed
     # to avoid unnecessary policy violations.
     # Used to be: if length(r.diff) == 0
