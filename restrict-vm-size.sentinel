@@ -87,7 +87,7 @@ allowed_sizes = [
   "Standard_A2",
   "Standard_D1_v2",
   "Standard_D2_v2",
-#  "Standard_B1ms",
+  "Standard_B1ms",
 ]
 
 ##### Rules #####
