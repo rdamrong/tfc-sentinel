@@ -6,6 +6,8 @@ module "azure-functions" {
 }
 policy "enforce-mandatory-tags" {
     enforcement_level = "hard-mandatory"
+}
 
-
+policy "tf-version" {
+    enforcement_level = "hard-mandatory"
 }
