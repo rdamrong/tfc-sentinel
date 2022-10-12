@@ -11,3 +11,6 @@ policy "enforce-mandatory-tags" {
 policy "tf-version" {
     enforcement_level = "hard-mandatory"
 }
+policy "restrict-vm-size" {
+    enforcement_level = "advisory"
+}
