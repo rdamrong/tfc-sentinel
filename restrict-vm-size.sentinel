@@ -47,7 +47,8 @@ find_resources_from_plan = func(type) {
 validate_attribute_in_list = func(type, attribute, allowed_values) {
 
   validated = true
-
+  
+  print("type: ",type,"calling find_resource_from_plan ")
   # Get all resource instances of the specified type
   resource_instances = find_resources_from_plan(type)
 
