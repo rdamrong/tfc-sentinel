@@ -24,7 +24,7 @@ param mandatory_tags default ["environment"]
 # Get all Azure Resources with standard tags
 allAzureResourcesWithStandardTags =
                         azure.find_resources_with_standard_tags(resource_types)
-print("All Resource ::",allAzureResourcesWithStandardTags)
+#print("All Resource ::",allAzureResourcesWithStandardTags)
 
 # Filter to Azure resources with violations using azurerm_virtual_machine
 # Warnings will be printed for all violations since the last parameter is true
@@ -32,7 +32,7 @@ violatingAzureResources =
       plan.filter_attribute_not_contains_list(allAzureResourcesWithStandardTags,
                     "tags", mandatory_tags, true)
 
-print("No. Resource Violating :: ",violatingAzureResources)
+#print("No. Resource Violating :: ",violatingAzureResources)
 
 # Main rule
 main = rule {
