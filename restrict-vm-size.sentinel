@@ -87,10 +87,11 @@ allowed_sizes = [
   "Standard_A2",
   "Standard_D1_v2",
   "Standard_D2_v2",
+  "Standard_B1ms",
 ]
 
 ##### Rules #####
-
+#drs - change type as you want to evaluate,eg azurerm_linux_virtual_machine
 # Calls the validation function
 vms_validated = validate_attribute_in_list("azurerm_linux_virtual_machine",
                 "vm_size", allowed_sizes)
